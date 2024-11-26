@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-11-26T22:14:24.963694" rpa="false" schemaversion="5">
+<suite id="s1" name="Assignment" source="C:\sanjay\Assignment.robot">
+<test id="s1-t1" name="Open fitpeo website" line="15">
+<kw name="open browser with fitpeo url">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:25.261835" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-11-26T22:14:25.261835" elapsed="1.579343"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-26T22:14:26.841178" elapsed="0.038671"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:26.879849" level="INFO">Opening url 'https://www.fitpeo.com/'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-26T22:14:26.879849" elapsed="5.326470"/>
+</kw>
+<status status="PASS" start="2024-11-26T22:14:25.261835" elapsed="6.944484"/>
+</kw>
+<kw name="navigate to revenue calculator page">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:32.208321" level="INFO">Clicking element 'xpath://a[@href='/revenue-calculator']'.</msg>
+<arg>${revenue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:32.207323" elapsed="0.156908"/>
+</kw>
+<status status="PASS" start="2024-11-26T22:14:32.207323" elapsed="0.157767"/>
+</kw>
+<status status="PASS" start="2024-11-26T22:14:25.261835" elapsed="7.103733"/>
+</test>
+<test id="s1-t2" name="Test Slider" line="18">
+<kw name="Set Slider Position">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://input[@aria-valuemax="2000"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T22:14:32.367627" elapsed="1.523961"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:33.891588" level="INFO">Executing JavaScript:
+window.scrollTo(0,400)
+Without any arguments.</msg>
+<arg>window.scrollTo(0,400)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-11-26T22:14:33.891588" elapsed="0.005852"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-26T22:14:35.897731" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-26T22:14:33.897440" elapsed="2.000291"/>
+</kw>
+<kw name="Drag And Drop By Offset" owner="SeleniumLibrary">
+<arg>css:${sliderthumb}</arg>
+<arg>94</arg>
+<arg>0</arg>
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<status status="PASS" start="2024-11-26T22:14:35.897731" elapsed="0.607535"/>
+</kw>
+<status status="PASS" start="2024-11-26T22:14:32.366615" elapsed="4.139670"/>
+</kw>
+<status status="PASS" start="2024-11-26T22:14:32.366615" elapsed="4.139670"/>
+</test>
+<test id="s1-t3" name="check text value" line="20">
+<kw name="Update and check slider value">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Field_Locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T22:14:36.506285" elapsed="0.012971"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:36.535674" level="INFO">${value} = 823</msg>
+<var>${value}</var>
+<arg>${Field_Locator}</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:36.519256" elapsed="0.016418"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2024-11-26T22:14:36.535674" level="INFO">Length is 3.</msg>
+<msg time="2024-11-26T22:14:36.535674" level="INFO">${backspaces count} = 3</msg>
+<var>${backspaces count}</var>
+<arg>${value}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2024-11-26T22:14:36.535674" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Repeat Keyword" owner="BuiltIn">
+<msg time="2024-11-26T22:14:36.535674" level="INFO">Repeating keyword, round 1/4.</msg>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>${Field_Locator}</arg>
+<arg>\\08</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:36.535674" elapsed="0.104253"/>
+</kw>
+<msg time="2024-11-26T22:14:36.639927" level="INFO">Repeating keyword, round 2/4.</msg>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>${Field_Locator}</arg>
+<arg>\\08</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:36.639927" elapsed="0.077916"/>
+</kw>
+<msg time="2024-11-26T22:14:36.717843" level="INFO">Repeating keyword, round 3/4.</msg>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>${Field_Locator}</arg>
+<arg>\\08</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:36.718848" elapsed="0.105343"/>
+</kw>
+<msg time="2024-11-26T22:14:36.824191" level="INFO">Repeating keyword, round 4/4.</msg>
+<kw name="Press Key" owner="SeleniumLibrary">
+<arg>${Field_Locator}</arg>
+<arg>\\08</arg>
+<doc>Simulates user pressing key on element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:36.824191" elapsed="0.046199"/>
+</kw>
+<arg>${backspaces count +1}</arg>
+<arg>Press Key</arg>
+<arg>${Field_Locator}</arg>
+<arg>\\08</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<status status="PASS" start="2024-11-26T22:14:36.535674" elapsed="0.334716"/>
+</kw>
+<arg>"""${value}""" != ''</arg>
+<arg>Repeat Keyword</arg>
+<arg>${backspaces count +1}</arg>
+<arg>Press Key</arg>
+<arg>${Field_Locator}</arg>
+<arg>\\08</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-11-26T22:14:36.535674" elapsed="0.334716"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:36.870390" level="INFO">Typing text '520' into text field 'xpath://input[@type='number']'.</msg>
+<arg>xpath://input[@type='number']</arg>
+<arg>520</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:36.870390" elapsed="0.168019"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.039088" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-11-26T22:14:37.038409" elapsed="3.000679"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.051108" level="INFO">${text} = 520</msg>
+<var>${text}</var>
+<arg>${Field_Locator}</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.039088" elapsed="0.012020"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.066746" level="INFO">${slider text} = 520</msg>
+<var>${slider text}</var>
+<arg>xpath://input[@aria-valuemax='2000']</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.051108" elapsed="0.015638"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.066746" level="INFO">520</msg>
+<arg>${slider text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.066746" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<arg>${text}</arg>
+<arg>${slider text}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.066746" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-26T22:14:36.506285" elapsed="3.560461"/>
+</kw>
+<status status="PASS" start="2024-11-26T22:14:36.506285" elapsed="3.560461"/>
+</test>
+<test id="s1-t4" name="check box click" line="22">
+<kw name="click checkbox and validate values">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.066746" level="INFO">${Total} = 0</msg>
+<var>${Total}</var>
+<arg>0</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.066746" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.066746" level="INFO">${Total Recurring} = 110700</msg>
+<var>${Total Recurring}</var>
+<arg>110700</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.066746" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.066746" level="INFO">Clicking element 'xpath://p[text()='CPT-99091']/following-sibling::label[1]'.</msg>
+<arg>xpath://p[text()='${element}']/following-sibling::label[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.066746" elapsed="0.210980"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.318739" level="INFO">${text} = 57</msg>
+<var>${text}</var>
+<arg>xpath://p[text()='${element}']/following::div[.//span[text()='Recurring in 30 days']]/following-sibling::label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.277726" elapsed="0.041013"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.318739" level="INFO">${value} = 57.0</msg>
+<var>${value}</var>
+<arg>${text}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.318739" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.318739" level="INFO">${Total} = 57.0</msg>
+<var>${Total}</var>
+<arg>${Total}+${value}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.318739" elapsed="0.000000"/>
+</kw>
+<var name="${element}">CPT-99091</var>
+<status status="PASS" start="2024-11-26T22:14:40.066746" elapsed="0.251993"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.318739" level="INFO">Clicking element 'xpath://p[text()='CPT-99453']/following-sibling::label[1]'.</msg>
+<arg>xpath://p[text()='${element}']/following-sibling::label[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.318739" elapsed="0.115487"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.467665" level="INFO">${text} = 63</msg>
+<var>${text}</var>
+<arg>xpath://p[text()='${element}']/following::div[.//span[text()='Recurring in 30 days']]/following-sibling::label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.434226" elapsed="0.033439"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.467665" level="INFO">${value} = 63.0</msg>
+<var>${value}</var>
+<arg>${text}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.467665" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.467665" level="INFO">${Total} = 120.0</msg>
+<var>${Total}</var>
+<arg>${Total}+${value}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.467665" elapsed="0.000000"/>
+</kw>
+<var name="${element}">CPT-99453</var>
+<status status="PASS" start="2024-11-26T22:14:40.318739" elapsed="0.148926"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.467665" level="INFO">Clicking element 'xpath://p[text()='CPT-99454']/following-sibling::label[1]'.</msg>
+<arg>xpath://p[text()='${element}']/following-sibling::label[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.467665" elapsed="0.122080"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.620967" level="INFO">${text} = 63</msg>
+<var>${text}</var>
+<arg>xpath://p[text()='${element}']/following::div[.//span[text()='Recurring in 30 days']]/following-sibling::label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.589745" elapsed="0.031222"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.620967" level="INFO">${value} = 63.0</msg>
+<var>${value}</var>
+<arg>${text}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.620967" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.620967" level="INFO">${Total} = 183.0</msg>
+<var>${Total}</var>
+<arg>${Total}+${value}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.620967" elapsed="0.000000"/>
+</kw>
+<var name="${element}">CPT-99454</var>
+<status status="PASS" start="2024-11-26T22:14:40.467665" elapsed="0.153302"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.620967" level="INFO">Clicking element 'xpath://p[text()='CPT-99474']/following-sibling::label[1]'.</msg>
+<arg>xpath://p[text()='${element}']/following-sibling::label[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.620967" elapsed="0.131863"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.801004" level="INFO">${text} = 15</msg>
+<var>${text}</var>
+<arg>xpath://p[text()='${element}']/following::div[.//span[text()='Recurring in 30 days']]/following-sibling::label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.752830" elapsed="0.048174"/>
+</kw>
+<kw name="Convert To Number" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.801004" level="INFO">${value} = 15.0</msg>
+<var>${value}</var>
+<arg>${text}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.801004" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.801004" level="INFO">${Total} = 198.0</msg>
+<var>${Total}</var>
+<arg>${Total}+${value}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.801004" elapsed="0.000000"/>
+</kw>
+<var name="${element}">CPT-99474</var>
+<status status="PASS" start="2024-11-26T22:14:40.620967" elapsed="0.180037"/>
+</iter>
+<var>${element}</var>
+<value>@{check_boxlist}</value>
+<status status="PASS" start="2024-11-26T22:14:40.066746" elapsed="0.734258"/>
+</for>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.801004" level="INFO">${final} = 5940.0</msg>
+<var>${final}</var>
+<arg>${Total}*30</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.801004" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.801004" level="INFO">5940.0</msg>
+<arg>${final}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.801004" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Integers" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.801004" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<msg time="2024-11-26T22:14:40.801004" level="FAIL">5940 != 110700</msg>
+<arg>${final}</arg>
+<arg>${Total Recurring}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<status status="FAIL" start="2024-11-26T22:14:40.801004" elapsed="0.000000">5940 != 110700</status>
+</kw>
+<status status="FAIL" start="2024-11-26T22:14:40.066746" elapsed="0.734258">5940 != 110700</status>
+</kw>
+<status status="FAIL" start="2024-11-26T22:14:40.066746" elapsed="0.734258">5940 != 110700</status>
+</test>
+<test id="s1-t5" name="validate tolat reccuring" line="24">
+<kw name="validate total">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T22:14:40.819149" level="INFO">${reccuring} = $70200</msg>
+<var>${reccuring}</var>
+<arg>xpath://p[text()='Total Recurring Reimbursement for all Patients Per Month:']//child::p[1]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.801004" elapsed="0.018145"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.819149" level="INFO">$70200</msg>
+<arg>${reccuring}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.819149" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-26T22:14:40.819149" level="INFO">both are not equal</msg>
+<arg>both are not equal</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.819149" elapsed="0.000000"/>
+</kw>
+<arg>'${reccuring}' == '${Totalvalue}'</arg>
+<arg>Log</arg>
+<arg>both are equal</arg>
+<arg>ELSE</arg>
+<arg>Log</arg>
+<arg>both are not equal</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-11-26T22:14:40.819149" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-26T22:14:40.801004" elapsed="0.018145"/>
+</kw>
+<status status="PASS" start="2024-11-26T22:14:40.801004" elapsed="0.018145"/>
+</test>
+<status status="FAIL" start="2024-11-26T22:14:24.963694" elapsed="15.855455"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="1" skip="0" id="s1" name="Assignment">Assignment</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

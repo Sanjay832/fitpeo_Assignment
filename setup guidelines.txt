@@ -1,0 +1,14 @@
+1. Install Python:
+
+Download and install the latest Python version from the official website (https://www.python.org/).
+2. Install Robot Framework and Required Libraries:
+
+Open your terminal or command prompt.
+Use the following command to install Robot Framework and SeleniumLibrary:pip install robotframework seleniumlibrary and
+pip install robotframework
+
+3. Run the Test Script:
+
+Open your terminal or command prompt.
+Navigate to the directory where you saved your test script.
+Execute the test script using the following command:robot filename.robot
